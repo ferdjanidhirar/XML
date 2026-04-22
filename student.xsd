@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+   
+    <xsd:element name="Students">
+        <xsd:complexType>
+            <xsd:sequence>
+
+               
+                <xsd:element name="Student" maxOccurs="unbounded">
+                    <xsd:complexType>
+
+                        <xsd:sequence>
+
+                            <xsd:element name="FirstName" type="xsd:string"/>
+                            <xsd:element name="FamilyName" type="xsd:string"/>
+                            <xsd:element name="Age" type="xsd:integer"/>
+
+                           
+                            <xsd:element name="Address">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                        <xsd:element name="Number" type="xsd:integer"/>
+                                        <xsd:element name="City" type="xsd:string"/>
+                                        <xsd:element name="PostalCode" type="xsd:string"/>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+
+                            <xsd:element name="Level" type="xsd:string"/>
+                            <xsd:element name="Speciality" type="xsd:string"/>
+                            <xsd:element name="Average" type="xsd:decimal"/>
+
+                        </xsd:sequence>
+
+                       
+                        <xsd:attribute name="RegistrationNumber" type="xsd:string" use="required"/>
+
+                    </xsd:complexType>
+                </xsd:element>
+
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+</xsd:schema>
